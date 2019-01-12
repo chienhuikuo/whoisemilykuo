@@ -9,7 +9,7 @@
 
 h1 {
   font-family: "Roboto", "Helvetica", "微軟正黑體", Arial, sans-serif;
-  font-size: 4em;
+  font-size: 10vmin;
   font-weight: 700;
   color: #5d5d5d;
   margin: 0;
@@ -18,7 +18,7 @@ h1 {
 
 h2 {
   font-family: "Roboto", "Helvetica", "微軟正黑體", Arial, sans-serif;
-  font-size: 4em;
+  font-size: 10vmin;
   font-weight: 700;
   color: #DDDDDD;
   margin: 0;
@@ -27,7 +27,7 @@ h2 {
 
 h3 {
   font-family: "Roboto", "Helvetica", "微軟正黑體", Arial, sans-serif;
-  font-size: 1.3em;
+  font-size: 1.3vmin;
   font-weight: 500;
   color: #5d5d5d;
   margin: 0;
@@ -35,7 +35,7 @@ h3 {
 
 p {
   font-family: "Roboto", "Helvetica", "微軟正黑體", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 2.7vmin;
   font-weight: 400;
   color: #5d5d5d;
   margin: 0;
@@ -43,19 +43,19 @@ p {
 
 span {
   font-family: "Roboto", "Helvetica", "微軟正黑體", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 2.7vmin;
   font-weight: 400;
   color: #5d5d5d;
   margin: 0;
 }
 
 i {
-  font-size: 24px;
+  font-size: 24vmin;
   color: #ffffff;
 }
 
 p > span {
-  font-size: 1em;
+  font-size: 1vmin;
 }
 
 .clearboth {
@@ -131,7 +131,7 @@ body {
 
 .banner .banner-content h1 > span {
   font-family: "Roboto", "Helvetica", "微軟正黑體", Arial, sans-serif;
-  font-size: 1em;
+  font-size: 10vmin;
   font-weight: 500;
   color: #ffffff;
   margin: 0;
@@ -168,7 +168,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 160px;
   top: 7px;
   left: -7px;
   -webkit-box-pack: justify;
@@ -182,7 +181,6 @@ body {
 .banner .other-link a, .banner .other-link i {
   cursor: pointer;
   opacity: .75;
-  font-size: 28px;
 }
 
 .banner .other-link a:hover, .banner .other-link i:hover {
@@ -449,7 +447,13 @@ body {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
+  .other-link {
+    width: 225px;
+  }
+  .other-link a, .other-link i {
+    font-size: 4vmin;
+  }
   .content .title {
     text-align: center;
   }
@@ -479,7 +483,19 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
+  span, p {
+    font-size: 5.6vmin;
+  }
+  h1, h2 {
+    font-size: 19vmin;
+  }
+  .other-link {
+    width: 160px;
+  }
+  .other-link a, .other-link i {
+    font-size: 28px;
+  }
   .skill h2 {
     float: right;
   }

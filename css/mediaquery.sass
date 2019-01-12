@@ -1,0 +1,45 @@
+//------mobile-------手機平板
+@media screen and (max-width: 767px)
+  .content 
+    .title
+      text-align: center
+    .about-me,.portfolio
+      padding: 20px 20px 0
+    .about-me
+      >div
+        &:nth-child(3) //敘述
+          width: 100%
+          text-align: center
+        &:nth-child(4),&:nth-child(5) //經驗獲獎
+          text-align: center
+          margin-top: 50px
+      .myphoto
+        position: relative
+        margin: 40px auto
+  .skill
+    .skill-flex
+      .skill-block
+        width: 20em
+  .year2018
+	  .experience-work
+      margin-right: 0
+  .year2016
+	  .experience-work
+      margin-right: 0
+//------desktop-------電腦
+@media only screen and (min-width: 768px) 
+  .skill
+    h2
+      float: right
+    .skill-flex
+      .skill-block
+        width: 14em
+  .year2018
+	  .experience-work
+      float: right
+      margin-right: 10px
+  .year2016
+	  .experience-work
+      float: left
+      margin-right: 10px
+  

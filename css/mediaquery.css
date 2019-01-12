@@ -1,0 +1,47 @@
+@media screen and (max-width: 767px) {
+  .content .title {
+    text-align: center;
+  }
+  .content .about-me, .content .portfolio {
+    padding: 20px 20px 0;
+  }
+  .content .about-me > div:nth-child(3) {
+    width: 100%;
+    text-align: center;
+  }
+  .content .about-me > div:nth-child(4), .content .about-me > div:nth-child(5) {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .content .about-me .myphoto {
+    position: relative;
+    margin: 40px auto;
+  }
+  .skill .skill-flex .skill-block {
+    width: 20em;
+  }
+  .year2018 .experience-work {
+    margin-right: 0;
+  }
+  .year2016 .experience-work {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .skill h2 {
+    float: right;
+  }
+  .skill .skill-flex .skill-block {
+    width: 14em;
+  }
+  .year2018 .experience-work {
+    float: right;
+    margin-right: 10px;
+  }
+  .year2016 .experience-work {
+    float: left;
+    margin-right: 10px;
+  }
+}
+/*# sourceMappingURL=mediaquery.css.map */

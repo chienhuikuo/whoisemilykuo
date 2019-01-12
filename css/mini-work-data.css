@@ -1,0 +1,25 @@
+.mini-work-f2e {
+  background: url("../img/works/mini-f2e.jpg") center -5px no-repeat;
+  background-size: cover;
+}
+
+.mini-work-yiwen {
+  background: url("../img/works/mini-yiwen.jpg") center top no-repeat;
+  background-size: cover;
+}
+
+.mini-work-wanderers {
+  background: url("../img/works/mini-wanderers.jpg") center bottom no-repeat;
+  background-size: cover;
+}
+
+.mini-work-food {
+  background: url("../img/works/mini-food.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.mini-work-dw {
+  background: url("../img/works/mini-dw.jpg") center top no-repeat;
+  background-size: cover;
+}
+/*# sourceMappingURL=mini-work-data.css.map */

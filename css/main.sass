@@ -1,0 +1,274 @@
+@import "basic"
+@import "mini-work-data"
+
+
+body
+	width: 100%
+	height: 100%
+.wrapper
+	width: 100%
+	height: 100%
+	background: url("../img/banner.jpg") 30% 100% no-repeat fixed 
+	background-size: cover
+	overflow: hidden
+	//animation: wrapperback 8s linear backwards
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(-145deg,#1bb7f3,#300b6b) fixed
+		background-size: cover
+		opacity: .4
+.banner
+	height: 100vh
+	.banner-content
+		position: fixed
+		width: 100%
+		height: 100%
+		h1
+			color: $light-color
+			text-align: right
+			top: 45%
+			right: 12%
+			>span    //動態文字
+				+font(1em,500,$light-color)
+				text-align: right
+				font-family: "Amaranth", "Roboto", "Helvetica", "微軟正黑體", Arial, sans-serif !important
+
+		.scroll
+			position: absolute
+			left: 50%
+			top: 85%
+			transform: translateX(-50%)
+			color: $light-color
+			span
+				font-family: $font-original
+				color: $light-color
+				font-size: 1.3em
+			i
+				display: block
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				animation: updown infinite 1s ease-out
+
+	//----左側其他連結----
+	.other-link
+		display: flex
+		width: 160px
+		top: 7px
+		left: -7px
+		justify-content: space-between
+		padding: 0
+		transform: rotate(90deg) translate(50%, 25px)
+		a,i
+			cursor: pointer
+			opacity: .75
+			font-size: 28px
+			&:hover
+				opacity: 1
+				text-shadow: 2px 2px #1e3133
+				transform: scale(1.2)
+	.copyright
+		+font(1em,400,$light-color)
+		position: fixed
+		left: 50%
+		bottom: 0.8em
+		transform: translateX(-50%)
+
+//----內容----
+#mycanvas
+	background: #fffdfc
+	position: absolute
+	top: 0
+	left: 0
+	border-radius: 10px
+.content
+	width: 94%
+	margin: 0 auto
+	background: #fff
+	box-shadow: 0 0 7px 2px #13212399
+	border-radius: 10px
+	margin-bottom: 50px
+	.title
+		color: white
+		text-shadow: 1px 1px #bdbdbd, 1px -1px #d6d6d6, -1px 1px #d6d6d6, -1px -1px #d6d6d6
+		line-height: 65px
+		margin-bottom: 10px
+	.about-me,.portfolio
+		padding: 40px 40px 0
+	.about-me
+		>div
+			line-height: 3em 
+			&:nth-child(3) //自介
+				width: 60%
+			&:nth-child(4),&:nth-child(5) //經驗獲獎
+				clear: both
+				margin-top: 140px
+				p
+					>span
+						color: #4eb1dc
+						font-weight: 500
+						margin-right: 5px
+		.myphoto
+			position: absolute
+			top: 8%
+			right: 2vw
+			width: 27vw
+			min-width: 250px
+			height: 27vw
+			min-height: 250px
+			border-radius: 25%
+			animation: myphoto 10s infinite linear backwards
+			overflow: hidden
+			transform-origin: 51% 51%
+			&:before
+				content: ""
+				display: inline-block
+				position: absolute
+				width: 200%
+				height: 200%
+				background: url("../img/me4.jpg") center center no-repeat 
+				transform-origin: 38% 38%
+				background-size: 85%
+				left: -25%
+				top: -25%
+				animation: remyphoto 10s infinite linear backwards
+			&:after
+				content: ""
+				display: inline-block
+				width: 80%
+				height: 80%
+				border: 5px solid #fff
+		.yearblock
+			//background-color: pink
+			clear: both 
+			>h3
+				font-family: "Amaranth", "Roboto", "Helvetica", "微軟正黑體", Arial, sans-serif !important
+				+font(2em,500,#4c4c4c)
+				margin-bottom: 20px
+			.experience-text
+				display: inline-block
+				>p
+					>i
+						font-size: 1.2em
+						color: #e0bc72
+						margin-right: 3px
+			.experience-work
+				display: inline-block
+				margin-top: 8px
+				margin-bottom: 5%
+				>div
+					display: inline-block
+					width: 235px
+					height: 270px
+					border: 1px solid #e6e6e6
+					margin-right: 10px
+					border-radius: 10px
+					overflow: hidden
+					&:hover>div>div //作用在mini-work
+						transform: scale(1.3)
+				.mini-overflow
+					width: 100%
+					height: 75%
+					margin: 0 auto 7px
+					overflow: hidden
+				.mini-work
+					width: 100%
+					height: 100%
+					transition: .2s
+				img
+					width: 100%
+					margin: 0 auto
+				p
+					line-height: 28px
+					font-size: 1em
+					text-align: center
+				.work-type
+					color: #7bc3d6 //#81c4d6
+	//----SKILL & TOOLS----
+	.skill
+		padding: 0 40px 40px
+		h2
+			//float: right
+			margin-top: 40px	
+		.skill-flex
+			clear: both
+			display: flex
+			justify-content: space-around	
+			flex-wrap: wrap
+			margin-bottom: 5%
+			.skill-block
+				display: inline-block
+				//width: 14em
+				margin-top: 20px
+				>div
+					margin: 0 auto
+					width: 100%
+					background-color: #666666
+					border-radius: 50%
+					>img
+						width: 100%
+				&:nth-child(1)
+					>div
+						background-color: #fdf7cc
+				&:nth-child(2)
+					>div
+						background-color: #e4ffcf
+				&:nth-child(3)
+					>div
+						background-color: #dcf5fb
+				&:nth-child(4)
+					>div
+						background-color: #ffd5d2
+				h3
+					display: block
+					text-align: center
+					font-size: 1.2em
+					line-height: 2.4em
+		.tools-flex
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			.tools-block
+				width: 10%
+				margin: 20px
+				div
+					width: 100%
+					padding-top: 100%
+					background: #aaa
+					border-radius: 10px
+
+//-----PORTFOLIO-----
+	
+//------RWD-------
+@import "mediaquery"
+//------動畫--------	
+@keyframes updown
+	0%
+		top: 45px
+	25%
+		top: 30px
+	100%
+		top: 45px
+@keyframes myphoto
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)
+@keyframes remyphoto
+	0%
+		transform: rotate(360deg)
+	100%
+		transform: rotate(0)
+@keyframes wrapperback
+	0%
+		background-size: 110%
+	80%
+		background-size: 100%	
+	100%
+		background-size: 100%
+

@@ -1,0 +1,37 @@
+*
+  margin: 0
+  padding: 0
+  position: relative
+  box-sizing: border-box
+$main-color: #5d5d5d
+$light-color: #ffffff
+$sub-color: #DDDDDD
+$font-special: 'Amaranth','Roboto','Helvetica','微軟正黑體',Arial,sans-serif
+$font-original: 'Roboto','Helvetica','微軟正黑體',Arial,sans-serif
+@mixin font($size,$weight,$color)
+  font-family: $font-original
+  font-size: $size
+  font-weight: $weight
+  color: $color
+  margin: 0
+// 20px=1.3em  64px=4em 18px=1.2em
+h1
+  +font(4em,700,$main-color)
+  font-family: $font-special
+h2
+  +font(4em,700,$sub-color)
+  font-family: $font-special
+h3
+  +font(1.3em,500,$main-color)
+p
+  +font(1.2em,400,$main-color)
+span
+  +font(1.2em,400,$main-color)
+i
+  font-size: 24px
+  color: $light-color
+p
+  >span
+    font-size: 1em
+.clearboth
+  clear: both
